@@ -1,0 +1,19 @@
+# GitHub Pages Configuration
+theme: jekyll-theme-minimal
+title: 南京大学工程医学研究组
+description: Engineering Medicine Research Group, Nanjing University
+
+# 静态文件处理
+plugins:
+  - jekyll-relative-links
+
+# 相对链接设置
+relative_links:
+  enabled: true
+  collections: true
+
+# 排除不需要处理的文件
+exclude:
+  - README.md
+  - .git/
+  - .gitignore 

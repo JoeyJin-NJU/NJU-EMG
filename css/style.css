@@ -1,0 +1,963 @@
+/* 现代Glassmorphism风格 - 红色主题 (参考SCILab设计) */
+
+/* 全局重置和基础设置 */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* 高级背景设计 */
+html {
+	background: 
+		linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+		url('../images/background.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	min-height: 100vh;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+/* 主体容器 */
+body {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	overflow-y: scroll;
+	background: rgba(0, 0, 0, 0.05);
+	backdrop-filter: blur(30px);
+	border-radius: 25px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 
+		0 20px 60px rgba(0, 0, 0, 0.1),
+		inset 0 1px 0 rgba(255, 255, 255, 0.8);
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 0;
+	position: relative;
+}
+
+/* 高级玻璃卡片 */
+.glass-card {
+	background: rgba(120, 120, 120, 0.08);
+	backdrop-filter: blur(25px);
+	border-radius: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	box-shadow: 
+		0 15px 35px rgba(0, 0, 0, 0.1),
+		inset 0 1px 0 rgba(255, 255, 255, 0.9),
+		0 5px 15px rgba(220, 20, 60, 0.1);
+	padding: 25px;
+	margin: 20px 0;
+	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	position: relative;
+	overflow: hidden;
+}
+
+.glass-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+}
+
+.glass-card:hover {
+	background: rgba(0, 0, 0, 0.12);
+	transform: translateY(-5px);
+	box-shadow: 
+		0 25px 50px rgba(0, 0, 0, 0.15),
+		inset 0 1px 0 rgba(255, 255, 255, 0.95),
+		0 10px 30px rgba(220, 20, 60, 0.2);
+}
+
+/* 表格现代化 */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	background: transparent;
+}
+
+td {
+	padding: 0;
+	vertical-align: top;
+}
+
+/* 文字样式重新设计 */
+.feet {
+	color: rgba(0, 0, 0, 0.8);
+	text-align: left;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+	font-weight: 400;
+	letter-spacing: 0.5px;
+}
+
+.PeopleName {
+	color: #2c3e50;
+	font-size: 26px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	font-weight: 700;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	letter-spacing: 0.5px;
+}
+
+.author1 {
+	font-size: 20px;
+	color: #495057;
+	text-align: center;
+	font-weight: 500;
+	letter-spacing: 0.3px;
+}
+
+/* 标题系统重新设计 */
+.Title1 {
+	color: #2c3e50;
+	font-size: 28px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	font-weight: 800;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+	letter-spacing: 0.5px;
+	position: relative;
+	background: linear-gradient(135deg, #dc143c, #ff6b6b);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+.Title1::after {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 60px;
+	height: 3px;
+	background: linear-gradient(90deg, #dc143c, #ff6b6b, transparent);
+	border-radius: 2px;
+}
+
+.Title2 {
+	color: #495057;
+	font-size: 22px;
+	text-align: left;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	font-weight: 700;
+	letter-spacing: 0.3px;
+}
+
+.Title3 {
+	color: #6c757d;
+	text-align: left;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	font-weight: 600;
+	letter-spacing: 0.2px;
+}
+
+/* 高亮文本重新设计 */
+.Hightlight1 {
+	color: #2c3e50;
+	font-size: 20px;
+	text-align: justify;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	font-weight: 500;
+	line-height: 1.8;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	letter-spacing: 0.3px;
+}
+
+/* 现代链接设计 */
+a:link {
+	color: #2c3e50;
+	text-decoration: none;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	position: relative;
+}
+
+a:visited {
+	color: #2c3e50;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #ff6b6b;
+	text-decoration: none;
+	text-shadow: 0 3px 8px rgba(255, 107, 107, 0.4);
+	transform: translateY(-1px);
+}
+
+a:hover::after {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, #ff6b6b, #dc143c);
+	border-radius: 1px;
+}
+
+/* 正文样式 */
+.Context1 {
+	color: #495057;
+	font-size: 20px;
+	text-align: justify;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	line-height: 1.8;
+	letter-spacing: 0.2px;
+}
+
+/* 邮箱样式 */
+.Mail1 {
+	color: #74c0fc;
+	font-size: 18px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.Mail1:hover {
+	color: #339af0;
+	text-shadow: 0 3px 8px rgba(51, 154, 240, 0.4);
+}
+
+/* 列表现代化 */
+li {
+	list-style: none;
+	float: left;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* 图片容器重新设计 */
+ul img {
+	width: 500px;
+	height: 100%;
+	object-fit: cover;
+	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+ul img:hover {
+	transform: none;
+}
+
+/* 轮播容器高级设计 */
+.container {
+	width: 500px;
+	height: auto;
+	margin: 0;
+	overflow: hidden;
+	position: relative;
+	background: transparent;
+}
+
+.container ul {
+	animation: Scanner 8s cubic-bezier(0.4, 0, 0.2, 1) 2s infinite;
+	width: 400%;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.container ul li {
+	margin: 0;
+	padding: 0;
+	width: 500px;
+	height: 100%;
+}
+
+/* 轮播指示器重新设计 */
+ol {
+	position: absolute;
+	bottom: 15px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 0;
+	z-index: 999;
+	display: flex;
+	gap: 4px;
+	margin: 0;
+}
+
+ol li {
+	width: 3px !important;
+	height: 3px !important;
+	min-width: 3px !important;
+	min-height: 3px !important;
+	max-width: 3px !important;
+	max-height: 3px !important;
+	background: rgba(255, 255, 255, 0.4);
+	border: none !important;
+	border-radius: 0 !important;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	padding: 0 !important;
+	margin: 0 !important;
+	box-shadow: none !important;
+	backdrop-filter: none !important;
+}
+
+ol li:hover, ol li.active {
+	background: rgba(255, 255, 255, 0.9);
+	transform: none !important;
+	width: 3px !important;
+	height: 3px !important;
+}
+
+@keyframes focus {
+	0%, 25% { 
+		background: rgba(255, 255, 255, 0.9);
+	}
+	30%, 100% { 
+		background: rgba(255, 255, 255, 0.4);
+	}
+}
+
+ol li {
+	animation: focus 8s ease-in-out infinite;
+}
+
+ol li:nth-child(1) { animation-delay: 0s; }
+ol li:nth-child(2) { animation-delay: 2.67s; }
+ol li:nth-child(3) { animation-delay: 5.33s; }
+
+/* 轮播动画优化 */
+.container ul {
+	animation: Scanner 8s cubic-bezier(0.4, 0, 0.2, 1) 2s infinite;
+	width: 400%;
+}
+
+@keyframes Scanner {
+	0%, 20% { transform: translateX(0px); }
+	33%, 53% { transform: translateX(-500px); }
+	66%, 86% { transform: translateX(-1000px); }
+	100% { transform: translateX(0px); }
+}
+
+/* 高级高亮区域 */
+.glass-highlight {
+	background: rgba(255, 255, 255, 0.12);
+	backdrop-filter: blur(25px);
+	border-radius: 16px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	padding: 20px 30px;
+	margin: 0;
+	box-shadow: 
+		0 10px 25px rgba(0, 0, 0, 0.2),
+		inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	position: relative;
+	max-width: 100%;
+}
+
+.glass-highlight p {
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+}
+
+.glass-highlight strong {
+	display: block;
+	margin-bottom: 15px;
+}
+
+.glass-highlight::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background: linear-gradient(90deg, transparent, rgba(255, 107, 107, 0.5), transparent);
+}
+
+/* 新闻列表项现代化 */
+td li {
+	margin: 12px 0;
+	padding: 18px 20px;
+	background: rgba(255, 255, 255, 0.06);
+	backdrop-filter: blur(15px);
+	border-radius: 12px;
+	border-left: 4px solid #dc143c;
+	transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	position: relative;
+	overflow: hidden;
+}
+
+td li::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, rgba(220, 20, 60, 0.05), transparent);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+td li:hover {
+	background: rgba(255, 255, 255, 0.1);
+	transform: translateX(8px) translateY(-2px);
+	box-shadow: 
+		0 8px 25px rgba(0, 0, 0, 0.2),
+		0 4px 12px rgba(220, 20, 60, 0.2);
+	border-left-color: #ff6b6b;
+}
+
+td li:hover::before {
+	opacity: 1;
+}
+
+/* 新闻条目特殊样式 */
+.news-item {
+	background: rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(20px);
+	border-radius: 15px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	margin: 15px 0;
+	padding: 15px;
+	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	box-shadow: 
+		0 8px 25px rgba(0, 0, 0, 0.15),
+		inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.news-item:hover {
+	background: rgba(255, 255, 255, 0.12);
+	transform: translateY(-3px);
+	box-shadow: 
+		0 15px 35px rgba(0, 0, 0, 0.25),
+		inset 0 1px 0 rgba(255, 255, 255, 0.15),
+		0 5px 15px rgba(220, 20, 60, 0.15);
+}
+
+.news-item img {
+	transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.news-item:hover img {
+	transform: scale(1.05);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 新闻条目表格行样式 */
+tr.news-item {
+	background: rgba(255, 255, 255, 0.06);
+	backdrop-filter: blur(15px);
+	border-radius: 15px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	margin: 15px 0;
+	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	box-shadow: 
+		0 8px 25px rgba(0, 0, 0, 0.15),
+		inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	position: relative;
+	overflow: hidden;
+}
+
+tr.news-item::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, rgba(220, 20, 60, 0.03), transparent);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+}
+
+tr.news-item:hover {
+	background: rgba(255, 255, 255, 0.12);
+	transform: translateY(-3px);
+	box-shadow: 
+		0 15px 35px rgba(0, 0, 0, 0.25),
+		inset 0 1px 0 rgba(255, 255, 255, 0.15),
+		0 5px 15px rgba(220, 20, 60, 0.15);
+}
+
+tr.news-item:hover::before {
+	opacity: 1;
+}
+
+tr.news-item img {
+	transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	object-fit: cover;
+}
+
+tr.news-item:hover img {
+	transform: scale(1.05);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 新闻条目内的列表项样式 */
+tr.news-item li {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	margin: 0;
+	padding: 8px 0;
+}
+
+tr.news-item li:hover {
+	background: transparent;
+	transform: none;
+	box-shadow: none;
+}
+
+/* 图片通用样式 */
+img {
+	border-radius: 12px;
+	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+img:hover {
+	transform: scale(1.05) translateY(-3px);
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* 文本效果增强 */
+strong {
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	font-weight: 700;
+}
+
+/* 现代滚动条 */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(180deg, #dc143c, #8b0000);
+	border-radius: 10px;
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(180deg, #ff6b6b, #dc143c);
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+	body {
+		width: 95%;
+		margin: 15px auto;
+		padding: 0;
+	}
+	
+	.glass-card {
+		padding: 20px;
+		margin: 15px 0;
+	}
+	
+	.container {
+		width: 100%;
+		max-width: 500px;
+	}
+	
+	ul img {
+		width: 100%;
+		max-width: 500px;
+	}
+}
+
+@media (max-width: 768px) {
+	.Title1 {
+		font-size: 24px;
+	}
+	
+	.Hightlight1 {
+		font-size: 18px;
+	}
+	
+	td {
+		padding: 15px;
+	}
+	
+	tr.news-item img {
+		width: 80px !important;
+		height: 60px !important;
+	}
+	
+	tr.news-item td {
+		font-size: 16px !important;
+		padding: 6px 0 !important;
+	}
+	
+	.Title1 {
+		font-size: 18px !important;
+	}
+	
+	.Title3 {
+		font-size: 14px !important;
+	}
+}
+
+/* 特殊背景覆盖 */
+[bgcolor="#F2F1EB"] {
+	background: rgba(255, 255, 255, 0.08) !important;
+	backdrop-filter: blur(20px);
+	border-radius: 12px;
+}
+
+[bgcolor="#B1040E"] {
+	background: linear-gradient(135deg, #dc143c, #8b0000) !important;
+	backdrop-filter: blur(20px);
+	border-radius: 12px;
+	box-shadow: 0 8px 25px rgba(220, 20, 60, 0.4);
+}
+
+[bgcolor="#8c1515"] {
+	background: linear-gradient(135deg, #8B0000, #4a0000) !important;
+	backdrop-filter: blur(20px);
+	border-radius: 12px;
+	box-shadow: 0 8px 25px rgba(139, 0, 0, 0.5);
+}
+
+/* 动画增强 */
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.glass-card {
+	animation: fadeInUp 0.6s ease-out;
+}
+
+/* 微交互效果 */
+.glass-card:active {
+	transform: translateY(-2px);
+	transition: transform 0.1s ease;
+}
+
+/* 新闻条目内链接样式优化 */
+tr.news-item a {
+	color: #f8f9fa;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	position: relative;
+	display: inline-block;
+	line-height: 1.4;
+	word-wrap: break-word;
+	hyphens: auto;
+	max-width: 100%;
+}
+
+tr.news-item a:hover {
+	color: #ff6b6b;
+	text-shadow: 0 0 8px rgba(255, 107, 107, 0.3);
+}
+
+/* 新闻条目标题容器优化 */
+tr.news-item td {
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	hyphens: auto;
+}
+
+/* 新闻条目列表项优化 */
+tr.news-item li {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	margin: 0;
+	padding: 8px 0;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	line-height: 1.5;
+}
+
+tr.news-item li:hover {
+	background: transparent;
+	transform: none;
+	box-shadow: none;
+}
+
+/* 更多链接样式 */
+.Title3 a {
+	color: #dc143c;
+	text-decoration: none;
+	padding: 6px 12px;
+	border: 1px solid rgba(220, 20, 60, 0.3);
+	border-radius: 20px;
+	background: rgba(220, 20, 60, 0.1);
+	backdrop-filter: blur(10px);
+	transition: all 0.3s ease;
+	font-weight: 500;
+}
+
+.Title3 a:hover {
+	background: rgba(220, 20, 60, 0.2);
+	border-color: #ff6b6b;
+	color: #ff6b6b;
+	transform: translateY(-1px);
+	box-shadow: 0 4px 12px rgba(220, 20, 60, 0.2);
+}
+
+/* ===== 现代Flexbox布局样式 ===== */
+
+/* 部分标题容器 */
+.section-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 25px;
+	padding-bottom: 15px;
+	border-bottom: 2px solid rgba(220, 20, 60, 0.3);
+}
+
+/* 部分标题 */
+.section-title {
+	color: #2c3e50;
+	font-size: 24px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	font-weight: 800;
+	margin: 0;
+	background: linear-gradient(135deg, #dc143c, #ff6b6b);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	letter-spacing: 1px;
+	position: relative;
+}
+
+/* 更多链接 */
+.more-link {
+	color: #dc143c !important;
+	text-decoration: none;
+	padding: 8px 16px;
+	border: 1px solid rgba(220, 20, 60, 0.4);
+	border-radius: 25px;
+	background: rgba(220, 20, 60, 0.1);
+	backdrop-filter: blur(10px);
+	transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	font-weight: 600;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+}
+
+.more-link:hover {
+	background: rgba(220, 20, 60, 0.2);
+	border-color: #ff6b6b;
+	color: #ff6b6b !important;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(220, 20, 60, 0.3);
+}
+
+/* 新闻容器 */
+.news-container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+/* 新闻条目 - Flexbox布局 */
+.news-item-flex {
+	display: flex;
+	align-items: flex-start;
+	gap: 20px;
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.08);
+	backdrop-filter: blur(20px);
+	border-radius: 16px;
+	border: 1px solid rgba(0, 0, 0, 0.12);
+	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	box-shadow: 
+		0 8px 25px rgba(0, 0, 0, 0.08),
+		inset 0 1px 0 rgba(255, 255, 255, 0.8);
+	position: relative;
+	overflow: hidden;
+}
+
+.news-item-flex::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, rgba(220, 20, 60, 0.03), transparent);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+}
+
+.news-item-flex:hover {
+	background: rgba(0, 0, 0, 0.12);
+	transform: translateY(-5px);
+	box-shadow: 
+		0 15px 40px rgba(0, 0, 0, 0.15),
+		inset 0 1px 0 rgba(255, 255, 255, 0.9),
+		0 8px 25px rgba(220, 20, 60, 0.2);
+}
+
+.news-item-flex:hover::before {
+	opacity: 1;
+}
+
+/* 新闻图片容器 */
+.news-image {
+	flex-shrink: 0;
+	width: 120px;
+	height: 90px;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.news-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	border-radius: 12px;
+}
+
+.news-item-flex:hover .news-image {
+	transform: scale(1.05);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.news-item-flex:hover .news-image img {
+	transform: scale(1.1);
+}
+
+/* 新闻内容容器 */
+.news-content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	min-width: 0; /* 防止flex项目溢出 */
+}
+
+/* 新闻日期 */
+.news-date {
+	color: #000000;
+	font-size: 14px;
+	font-weight: 500;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	letter-spacing: 0.5px;
+	opacity: 0.9;
+	margin-bottom: 4px;
+}
+
+/* 新闻标题 */
+.news-title {
+	margin: 0;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.4;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.news-title a {
+	color: #2c3e50 !important;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	display: block;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	hyphens: auto;
+}
+
+.news-title a:hover {
+	color: #ff6b6b !important;
+	text-shadow: 0 2px 8px rgba(255, 107, 107, 0.4);
+	transform: translateX(5px);
+}
+
+/* 特色新闻标题（如动态与随想的置顶文章） */
+.news-title.featured a {
+	color: #8D0884 !important;
+	font-weight: 700;
+}
+
+.news-title.featured a:hover {
+	color: #ff6b6b !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+	.section-header {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 15px;
+	}
+	
+	.section-title {
+		font-size: 20px;
+	}
+	
+	.news-item-flex {
+		flex-direction: column;
+		gap: 15px;
+		padding: 15px;
+	}
+	
+	.news-image {
+		width: 100%;
+		height: 200px;
+		align-self: center;
+		max-width: 300px;
+	}
+	
+	.news-title {
+		font-size: 16px;
+	}
+	
+	.news-date {
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 480px) {
+	.news-item-flex {
+		padding: 12px;
+		gap: 12px;
+	}
+	
+	.news-image {
+		height: 150px;
+	}
+	
+	.news-title {
+		font-size: 15px;
+	}
+	
+	.section-title {
+		font-size: 18px;
+	}
+}
+
+/* 科研平台图片悬停效果 */
+.news-item-flex img {
+	transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.news-item-flex:hover img {
+	transform: scale(1.02);
+	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
